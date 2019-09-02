@@ -21,6 +21,7 @@
 		B19554A9231CDE1900252996 /* GetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19554A4231CDE1900252996 /* GetStarted.swift */; };
 		B19554AA231CDE1900252996 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19554A5231CDE1900252996 /* Slide.swift */; };
 		B19554AB231CDE1900252996 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = B19554A6231CDE1900252996 /* Slide.xib */; };
+		B19554AE231CE4B600252996 /* SectionEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19554AD231CE4B600252996 /* SectionEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		B19554A4231CDE1900252996 /* GetStarted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetStarted.swift; path = "MC3-LeatherApp/Parts/Onboarding/GetStarted.swift"; sourceTree = SOURCE_ROOT; };
 		B19554A5231CDE1900252996 /* Slide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Slide.swift; path = "MC3-LeatherApp/Parts/Onboarding/Slide.swift"; sourceTree = SOURCE_ROOT; };
 		B19554A6231CDE1900252996 /* Slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Slide.xib; path = "MC3-LeatherApp/Parts/Onboarding/Slide.xib"; sourceTree = SOURCE_ROOT; };
+		B19554AD231CE4B600252996 /* SectionEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				43322B6D231C2EA200D0CCB2 /* SectionEdit.storyboard */,
 				4351A9FA231CD6A300E2294F /* SectionButton.swift */,
+				B19554AD231CE4B600252996 /* SectionEditViewController.swift */,
 			);
 			path = SectionEdit;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				43322B53231C1FBF00D0CCB2 /* ViewController.swift in Sources */,
 				43322B63231C1FD400D0CCB2 /* Model.swift in Sources */,
 				43322B51231C1FBF00D0CCB2 /* AppDelegate.swift in Sources */,
+				B19554AE231CE4B600252996 /* SectionEditViewController.swift in Sources */,
 				B19554AA231CDE1900252996 /* Slide.swift in Sources */,
 				B19554A7231CDE1900252996 /* OnboardingController.swift in Sources */,
 				4351A9FB231CD6A300E2294F /* SectionButton.swift in Sources */,
