@@ -25,6 +25,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="vLb-CX-Z4Z" kind="show" id="qeH-xl-qCF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,4 +50,7 @@
             <point key="canvasLocation" x="878" y="-8"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qeH-xl-qCF"/>
+    </inferredMetricsTieBreakers>
 </document>
