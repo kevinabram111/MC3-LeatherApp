@@ -28,14 +28,59 @@ class PreviewViewController: UIViewController {
     // }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let colorScanVC = segue.destination as! CameraViewController
-        colorScanVC.image = photoView.image!
+//        let colorScanVC = segue.destination as! CameraViewController
+//        colorScanVC.image = photoView.image!
+        let leatherImage = LeatherImageObject(image: image, width: Double(photoView.frame.width), height: Double(photoView.frame.height))
+        System.leatherImage = leatherImage
     }
     
-    @IBAction func SubmitPhotoButton_TouchUpInside(_ sender: UIButton) {
-        performSegue(withIdentifier: "colorScan_Segue", sender: nil)
+    @IBAction func confirmButton_TouchUpInside(_ sender: UIButton) {
+        
+        generateSections(image: image)
+        
+        performSegue(withIdentifier: "segueEdit", sender: nil)
     }
     
+    func generateSections(image: UIImage)
+    {
+//        let section1 = EmptyImageSectionObject(section: 1, image: cropImage(image: image, rect: CGRect(x: 10, y: 0, width: 207, height: 172)), width: 414, height: 688)
+        
+        let section1 = EmptyImageSectionObject(section: 1, image: cropImage(photoView.image!, toRect: CGRect(x: 0, y: 0, width: 207, height: 172), viewWidth: 414, viewHeight: 688)!, width: Double(photoView.frame.width), height: Double(photoView.frame.width))
+        
+       // photoView.image.crop
+        
+        System.emptyImageSections.append(section1)
+        
+        print("counted sections: \(System.emptyImageSections.count)")
+    }
+    
+    func cropImage(image: UIImage, rect: CGRect) -> UIImage {
+        let cgImage = image.cgImage! // better to write "guard" in realm app
+        let croppedCGImage = cgImage.cropping(to: rect)
+        return UIImage(cgImage: croppedCGImage!)
+    }
+    
+    func cropImage(_ inputImage: UIImage, toRect cropRect: CGRect, viewWidth: CGFloat, viewHeight: CGFloat) -> UIImage?
+    {
+        let imageViewScale = max(inputImage.size.width / viewWidth,
+                                 inputImage.size.height / viewHeight)
+
+        // Scale cropRect to handle images larger than shown-on-screen size
+        let cropZone = CGRect(x:cropRect.origin.x * imageViewScale,
+                              y:cropRect.origin.y * imageViewScale,
+                              width:cropRect.size.width * imageViewScale,
+                              height:cropRect.size.height * imageViewScale)
+
+        // Perform cropping in Core Graphics
+        guard let cutImageRef: CGImage = inputImage.cgImage?.cropping(to:cropZone)
+            else {
+                return nil
+        }
+
+        // Return image to UIImage
+        let croppedImage: UIImage = UIImage(cgImage: cutImageRef)
+        return croppedImage
+    }
     
     
     /*

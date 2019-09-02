@@ -21,22 +21,19 @@ struct System
     static var leatherImage: LeatherImageObject?
     
     //To store the emptyImageSections for helping the users in taking parts of the leathers.
-    static var emptyImageSections: [EmptyImageSectionObject]?
+    static var emptyImageSections = [EmptyImageSectionObject]()
     
     //To store the imageSections after taking photos
-    static var imageSections: [ImageSectionObject]?
+    static var imageSections = [ImageSectionObject]()
     
     //A function to calculate the percentage defect
     static func calculatePercentageDefect() -> Double
     {
         var defectIncrement: Double = 0
-        if let imageSections = System.imageSections
-        {
             for section in imageSections
             {
                 defectIncrement += section.percentageDefect
             }
-        }
         return defectIncrement
     }
 }

@@ -10,11 +10,21 @@ import UIKit
 
 class SectionEditViewController: UIViewController {
 
+    @IBOutlet weak var leatherImageView: UIImageView!
+    
+    @IBOutlet weak var testImage: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let leatherImage = System.leatherImage?.image
+        {
+            leatherImageView.image = leatherImage
+        }
         
+        testImage.image = System.emptyImageSections[0].image
     }
+    
     @IBAction func button1Tapped(_ sender: Any) {
         
         let storyboard = UIStoryboard(name: "SectionCamera", bundle: nil)
