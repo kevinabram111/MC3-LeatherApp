@@ -21,14 +21,16 @@
 		4351AA02231CE39E00E2294F /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4351A9FE231CE39E00E2294F /* UIImage+CVPixelBuffer.swift */; };
 		4351AA03231CE39E00E2294F /* DrawingBoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4351A9FF231CE39E00E2294F /* DrawingBoundingBoxView.swift */; };
 		4351AA05231CE5BD00E2294F /* SectionCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4351AA04231CE5BD00E2294F /* SectionCamera.swift */; };
-		4351AA0C231CE7B800E2294F /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4351AA0A231CE7B800E2294F /* YOLOv3Tiny.mlmodel */; };
-		4351AA0D231CE7B800E2294F /* LeatherDefectObjectDetection.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4351AA0B231CE7B800E2294F /* LeatherDefectObjectDetection.mlmodel */; };
 		B19554A7231CDE1900252996 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19554A2231CDE1900252996 /* OnboardingController.swift */; };
 		B19554A8231CDE1900252996 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19554A3231CDE1900252996 /* OnBoarding.storyboard */; };
 		B19554A9231CDE1900252996 /* GetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19554A4231CDE1900252996 /* GetStarted.swift */; };
 		B19554AA231CDE1900252996 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19554A5231CDE1900252996 /* Slide.swift */; };
 		B19554AB231CDE1900252996 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = B19554A6231CDE1900252996 /* Slide.xib */; };
 		B19554AE231CE4B600252996 /* SectionEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19554AD231CE4B600252996 /* SectionEditViewController.swift */; };
+		B19554B3231CEC8100252996 /* LeatherDefectObjectDetection.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B19554B1231CEC8000252996 /* LeatherDefectObjectDetection.mlmodel */; };
+		B19554B4231CEC8100252996 /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B19554B2231CEC8000252996 /* YOLOv3Tiny.mlmodel */; };
+		B19554B6231CEEB400252996 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19554B5231CEEB400252996 /* CameraViewController.swift */; };
+		B19554B8231CFAB400252996 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19554B7231CFAB400252996 /* PreviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,14 +50,16 @@
 		4351A9FE231CE39E00E2294F /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
 		4351A9FF231CE39E00E2294F /* DrawingBoundingBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingBoundingBoxView.swift; sourceTree = "<group>"; };
 		4351AA04231CE5BD00E2294F /* SectionCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCamera.swift; sourceTree = "<group>"; };
-		4351AA0A231CE7B800E2294F /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = YOLOv3Tiny.mlmodel; path = mlmodel/YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
-		4351AA0B231CE7B800E2294F /* LeatherDefectObjectDetection.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = LeatherDefectObjectDetection.mlmodel; path = mlmodel/LeatherDefectObjectDetection.mlmodel; sourceTree = "<group>"; };
 		B19554A2231CDE1900252996 /* OnboardingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingController.swift; path = "MC3-LeatherApp/Parts/Onboarding/OnboardingController.swift"; sourceTree = SOURCE_ROOT; };
 		B19554A3231CDE1900252996 /* OnBoarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = OnBoarding.storyboard; path = "MC3-LeatherApp/Parts/Onboarding/OnBoarding.storyboard"; sourceTree = SOURCE_ROOT; };
 		B19554A4231CDE1900252996 /* GetStarted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetStarted.swift; path = "MC3-LeatherApp/Parts/Onboarding/GetStarted.swift"; sourceTree = SOURCE_ROOT; };
 		B19554A5231CDE1900252996 /* Slide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Slide.swift; path = "MC3-LeatherApp/Parts/Onboarding/Slide.swift"; sourceTree = SOURCE_ROOT; };
 		B19554A6231CDE1900252996 /* Slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Slide.xib; path = "MC3-LeatherApp/Parts/Onboarding/Slide.xib"; sourceTree = SOURCE_ROOT; };
 		B19554AD231CE4B600252996 /* SectionEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionEditViewController.swift; sourceTree = "<group>"; };
+		B19554B1231CEC8000252996 /* LeatherDefectObjectDetection.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = LeatherDefectObjectDetection.mlmodel; sourceTree = "<group>"; };
+		B19554B2231CEC8000252996 /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
+		B19554B5231CEEB400252996 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		B19554B7231CFAB400252996 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +96,11 @@
 				43322B50231C1FBF00D0CCB2 /* AppDelegate.swift */,
 				43322B62231C1FD400D0CCB2 /* Model.swift */,
 				43322B52231C1FBF00D0CCB2 /* ViewController.swift */,
-				4351AA0B231CE7B800E2294F /* LeatherDefectObjectDetection.mlmodel */,
-				4351AA0A231CE7B800E2294F /* YOLOv3Tiny.mlmodel */,
 				4351A9FF231CE39E00E2294F /* DrawingBoundingBoxView.swift */,
 				4351A9FC231CE39D00E2294F /* Measure.swift */,
 				4351A9FE231CE39E00E2294F /* UIImage+CVPixelBuffer.swift */,
+				B19554B1231CEC8000252996 /* LeatherDefectObjectDetection.mlmodel */,
+				B19554B2231CEC8000252996 /* YOLOv3Tiny.mlmodel */,
 				4351A9FD231CE39E00E2294F /* VideoCapture.swift */,
 				43322B57231C1FC000D0CCB2 /* Assets.xcassets */,
 				43322B59231C1FC000D0CCB2 /* LaunchScreen.storyboard */,
@@ -120,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				43322B54231C1FBF00D0CCB2 /* Camera.storyboard */,
+				B19554B5231CEEB400252996 /* CameraViewController.swift */,
+				B19554B7231CFAB400252996 /* PreviewViewController.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -233,16 +239,18 @@
 				B19554A9231CDE1900252996 /* GetStarted.swift in Sources */,
 				43322B53231C1FBF00D0CCB2 /* ViewController.swift in Sources */,
 				4351AA00231CE39E00E2294F /* Measure.swift in Sources */,
+				B19554B8231CFAB400252996 /* PreviewViewController.swift in Sources */,
 				43322B63231C1FD400D0CCB2 /* Model.swift in Sources */,
-				4351AA0D231CE7B800E2294F /* LeatherDefectObjectDetection.mlmodel in Sources */,
+				B19554B3231CEC8100252996 /* LeatherDefectObjectDetection.mlmodel in Sources */,
 				4351AA01231CE39E00E2294F /* VideoCapture.swift in Sources */,
 				43322B51231C1FBF00D0CCB2 /* AppDelegate.swift in Sources */,
+				B19554B4231CEC8100252996 /* YOLOv3Tiny.mlmodel in Sources */,
 				B19554AE231CE4B600252996 /* SectionEditViewController.swift in Sources */,
 				B19554AA231CDE1900252996 /* Slide.swift in Sources */,
 				4351AA02231CE39E00E2294F /* UIImage+CVPixelBuffer.swift in Sources */,
 				4351AA05231CE5BD00E2294F /* SectionCamera.swift in Sources */,
-				4351AA0C231CE7B800E2294F /* YOLOv3Tiny.mlmodel in Sources */,
 				B19554A7231CDE1900252996 /* OnboardingController.swift in Sources */,
+				B19554B6231CEEB400252996 /* CameraViewController.swift in Sources */,
 				4351A9FB231CD6A300E2294F /* SectionButton.swift in Sources */,
 				4351AA03231CE39E00E2294F /* DrawingBoundingBoxView.swift in Sources */,
 			);
