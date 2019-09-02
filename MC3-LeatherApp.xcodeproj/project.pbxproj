@@ -76,7 +76,6 @@
 		43322B67231C2D7C00D0CCB2 /* Parts */ = {
 			isa = PBXGroup;
 			children = (
-				43322B6C231C2E5400D0CCB2 /* OnBoarding? */,
 				43322B6A231C2E3F00D0CCB2 /* SectionCamera */,
 				43322B69231C2DFB00D0CCB2 /* SectionEdit */,
 				43322B68231C2DBF00D0CCB2 /* Camera */,
@@ -107,13 +106,6 @@
 				43322B6F231C2EF200D0CCB2 /* SectionCamera.storyboard */,
 			);
 			path = SectionCamera;
-			sourceTree = "<group>";
-		};
-		43322B6C231C2E5400D0CCB2 /* OnBoarding? */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "OnBoarding?";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
