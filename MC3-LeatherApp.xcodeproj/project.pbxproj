@@ -9,19 +9,25 @@
 /* Begin PBXBuildFile section */
 		43322B51231C1FBF00D0CCB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43322B50231C1FBF00D0CCB2 /* AppDelegate.swift */; };
 		43322B53231C1FBF00D0CCB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43322B52231C1FBF00D0CCB2 /* ViewController.swift */; };
-		43322B56231C1FBF00D0CCB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43322B54231C1FBF00D0CCB2 /* Main.storyboard */; };
+		43322B56231C1FBF00D0CCB2 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43322B54231C1FBF00D0CCB2 /* Camera.storyboard */; };
 		43322B58231C1FC000D0CCB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43322B57231C1FC000D0CCB2 /* Assets.xcassets */; };
 		43322B5B231C1FC000D0CCB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43322B59231C1FC000D0CCB2 /* LaunchScreen.storyboard */; };
+		43322B63231C1FD400D0CCB2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43322B62231C1FD400D0CCB2 /* Model.swift */; };
+		43322B6E231C2EA200D0CCB2 /* SectionEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43322B6D231C2EA200D0CCB2 /* SectionEdit.storyboard */; };
+		43322B70231C2EF200D0CCB2 /* SectionCamera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43322B6F231C2EF200D0CCB2 /* SectionCamera.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		43322B4D231C1FBF00D0CCB2 /* MC3-LeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC3-LeatherApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43322B50231C1FBF00D0CCB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43322B52231C1FBF00D0CCB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		43322B55231C1FBF00D0CCB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		43322B55231C1FBF00D0CCB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Camera.storyboard; sourceTree = "<group>"; };
 		43322B57231C1FC000D0CCB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43322B5A231C1FC000D0CCB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43322B5C231C1FC000D0CCB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43322B62231C1FD400D0CCB2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		43322B6D231C2EA200D0CCB2 /* SectionEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SectionEdit.storyboard; sourceTree = "<group>"; };
+		43322B6F231C2EF200D0CCB2 /* SectionCamera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SectionCamera.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,57 @@
 		43322B4F231C1FBF00D0CCB2 /* MC3-LeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				43322B67231C2D7C00D0CCB2 /* Parts */,
 				43322B50231C1FBF00D0CCB2 /* AppDelegate.swift */,
+				43322B62231C1FD400D0CCB2 /* Model.swift */,
 				43322B52231C1FBF00D0CCB2 /* ViewController.swift */,
-				43322B54231C1FBF00D0CCB2 /* Main.storyboard */,
 				43322B57231C1FC000D0CCB2 /* Assets.xcassets */,
 				43322B59231C1FC000D0CCB2 /* LaunchScreen.storyboard */,
 				43322B5C231C1FC000D0CCB2 /* Info.plist */,
 			);
 			path = "MC3-LeatherApp";
+			sourceTree = "<group>";
+		};
+		43322B67231C2D7C00D0CCB2 /* Parts */ = {
+			isa = PBXGroup;
+			children = (
+				43322B6C231C2E5400D0CCB2 /* OnBoarding? */,
+				43322B6A231C2E3F00D0CCB2 /* SectionCamera */,
+				43322B69231C2DFB00D0CCB2 /* SectionEdit */,
+				43322B68231C2DBF00D0CCB2 /* Camera */,
+			);
+			path = Parts;
+			sourceTree = "<group>";
+		};
+		43322B68231C2DBF00D0CCB2 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				43322B54231C1FBF00D0CCB2 /* Camera.storyboard */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		43322B69231C2DFB00D0CCB2 /* SectionEdit */ = {
+			isa = PBXGroup;
+			children = (
+				43322B6D231C2EA200D0CCB2 /* SectionEdit.storyboard */,
+			);
+			path = SectionEdit;
+			sourceTree = "<group>";
+		};
+		43322B6A231C2E3F00D0CCB2 /* SectionCamera */ = {
+			isa = PBXGroup;
+			children = (
+				43322B6F231C2EF200D0CCB2 /* SectionCamera.storyboard */,
+			);
+			path = SectionCamera;
+			sourceTree = "<group>";
+		};
+		43322B6C231C2E5400D0CCB2 /* OnBoarding? */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "OnBoarding?";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +171,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43322B70231C2EF200D0CCB2 /* SectionCamera.storyboard in Resources */,
+				43322B6E231C2EA200D0CCB2 /* SectionEdit.storyboard in Resources */,
 				43322B5B231C1FC000D0CCB2 /* LaunchScreen.storyboard in Resources */,
 				43322B58231C1FC000D0CCB2 /* Assets.xcassets in Resources */,
-				43322B56231C1FBF00D0CCB2 /* Main.storyboard in Resources */,
+				43322B56231C1FBF00D0CCB2 /* Camera.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43322B53231C1FBF00D0CCB2 /* ViewController.swift in Sources */,
+				43322B63231C1FD400D0CCB2 /* Model.swift in Sources */,
 				43322B51231C1FBF00D0CCB2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,12 +195,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		43322B54231C1FBF00D0CCB2 /* Main.storyboard */ = {
+		43322B54231C1FBF00D0CCB2 /* Camera.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				43322B55231C1FBF00D0CCB2 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Camera.storyboard;
 			sourceTree = "<group>";
 		};
 		43322B59231C1FC000D0CCB2 /* LaunchScreen.storyboard */ = {
