@@ -10,14 +10,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Section Camera-->
         <scene sceneID="7wR-NE-C4d">
             <objects>
-                <viewController id="qOZ-Tn-8la" sceneMemberID="viewController">
+                <viewController id="qOZ-Tn-8la" customClass="SectionCamera" customModule="MC3_LeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kp8-J4-UkK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-hm-JVR">
+                                <rect key="frame" x="0.0" y="87" width="414" height="688"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BvP-DI-mPv" customClass="DrawingBoundingBoxView" customModule="MC3_LeatherApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="87" width="414" height="688"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efN-rh-qyl">
                                 <rect key="frame" x="170" y="786" width="74" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -26,16 +36,14 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-hm-JVR">
-                                <rect key="frame" x="0.0" y="87" width="414" height="688"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TqQ-bD-ds8"/>
                     </view>
                     <connections>
+                        <outlet property="boxesView" destination="BvP-DI-mPv" id="b3U-KU-F4p"/>
+                        <outlet property="cameraButton" destination="efN-rh-qyl" id="Pkb-fK-Dzx"/>
+                        <outlet property="videoPreview" destination="Rkx-hm-JVR" id="jas-lq-02i"/>
                         <segue destination="jp8-QL-1tz" kind="show" id="4nd-tq-6Cp"/>
                     </connections>
                 </viewController>

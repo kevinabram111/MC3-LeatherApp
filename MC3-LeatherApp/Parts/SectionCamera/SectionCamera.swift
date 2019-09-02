@@ -11,7 +11,13 @@ import Vision
 import CoreMedia
 
 class SectionCamera: UIViewController {
-
+    
+    @IBOutlet weak var videoPreview: UIView!
+    
+    @IBOutlet weak var boxesView: DrawingBoundingBoxView!
+    
+    @IBOutlet weak var cameraButton: UIButton!
+    
     let objectDetectionModel = YOLOv3Tiny()
     
     // MARK: - Vision Properties
@@ -44,7 +50,7 @@ class SectionCamera: UIViewController {
         
         
         
-        buttonOutlet.layer.cornerRadius = buttonOutlet.frame.width/2
+        cameraButton.layer.cornerRadius = cameraButton.frame.width/2
         
         // setup the model
         setUpModel()
@@ -91,7 +97,7 @@ class SectionCamera: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         timerSeconds = 6
-        buttonOutlet.isEnabled = true
+        cameraButton.isEnabled = true
         // self.videoCapture.start()
     }
     
@@ -145,7 +151,7 @@ class SectionCamera: UIViewController {
     @IBAction func buttonTapped(_ sender: UIButton) {
         self.videoCapture.start()
         runTimer()
-        self.buttonOutlet.isEnabled = false
+        self.cameraButton.isEnabled = false
     }
     
 }

@@ -144,9 +144,9 @@ extension VideoCapture: AVCaptureVideoDataOutputSampleBufferDelegate {
                 {
                 let image = self.imageFromSampleBuffer(sampleBuffer: sampleBuffer)
                 
-                let newFigure = Figures(image: image!)
-                
-                FiguresArray.append(newFigure)
+//                let newFigure = Figures(image: image!)
+//                
+//                FiguresArray.append(newFigure)
                 }
             }
             
