@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MC3-LeatherApp.xcodeproj">
+      location = "group:/Users/kevinabram/Desktop/MC3-LeatherApp/MC3-LeatherApp/LeatherDefectObjectDetection.mlmodel">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/kevinabram/Desktop/MC3-LeatherApp/MC3-LeatherApp/YOLOv3Tiny.mlmodel">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
