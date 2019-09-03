@@ -18,26 +18,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-hm-JVR">
-                                <rect key="frame" x="0.0" y="87" width="414" height="688"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-hm-JVR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="731"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Rkx-hm-JVR" secondAttribute="height" multiplier="414:731" id="TIV-bO-YJf"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BvP-DI-mPv" customClass="DrawingBoundingBoxView" customModule="MC3_LeatherApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="87" width="414" height="688"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvP-DI-mPv" customClass="DrawingBoundingBoxView" customModule="MC3_LeatherApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="731"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BvP-DI-mPv" secondAttribute="height" multiplier="414:731" id="Bap-n4-egf"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efN-rh-qyl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efN-rh-qyl">
                                 <rect key="frame" x="170" y="786" width="74" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="efN-rh-qyl" secondAttribute="height" multiplier="1:1" id="dXP-XN-qsf"/>
+                                </constraints>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TqQ-bD-ds8" firstAttribute="trailing" secondItem="efN-rh-qyl" secondAttribute="trailing" constant="170" id="541-Rw-Rdi"/>
+                            <constraint firstItem="TqQ-bD-ds8" firstAttribute="trailing" secondItem="BvP-DI-mPv" secondAttribute="trailing" id="DMY-th-FlB"/>
+                            <constraint firstItem="BvP-DI-mPv" firstAttribute="leading" secondItem="TqQ-bD-ds8" secondAttribute="leading" id="Xaz-Kv-J4d"/>
+                            <constraint firstItem="Rkx-hm-JVR" firstAttribute="top" secondItem="BvP-DI-mPv" secondAttribute="top" id="eYh-xK-g4R"/>
+                            <constraint firstItem="efN-rh-qyl" firstAttribute="top" secondItem="BvP-DI-mPv" secondAttribute="bottom" constant="11" id="fq4-Sf-1M4"/>
+                            <constraint firstItem="efN-rh-qyl" firstAttribute="leading" secondItem="TqQ-bD-ds8" secondAttribute="leading" constant="170" id="fyS-Dw-ofO"/>
+                            <constraint firstItem="TqQ-bD-ds8" firstAttribute="trailing" secondItem="Rkx-hm-JVR" secondAttribute="trailing" id="gid-Mp-Xjf"/>
+                            <constraint firstItem="TqQ-bD-ds8" firstAttribute="bottom" secondItem="efN-rh-qyl" secondAttribute="bottom" constant="2" id="hmg-fz-Dri"/>
+                            <constraint firstItem="Rkx-hm-JVR" firstAttribute="bottom" secondItem="BvP-DI-mPv" secondAttribute="bottom" id="sga-mw-yRc"/>
+                            <constraint firstItem="Rkx-hm-JVR" firstAttribute="leading" secondItem="TqQ-bD-ds8" secondAttribute="leading" id="tSr-Z8-pB0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TqQ-bD-ds8"/>
                     </view>
                     <connections>
