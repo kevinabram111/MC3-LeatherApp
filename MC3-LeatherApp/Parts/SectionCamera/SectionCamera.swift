@@ -108,7 +108,7 @@ class SectionCamera: UIViewController {
     
     // MARK: - Setup Core ML
     func setUpModel() {
-        if let visionModel = try? VNCoreMLModel(for: LeatherDefectObjectDetection().model) {
+        if let visionModel = try? VNCoreMLModel(for: LeatherDefectsCategorizedObjectDetection().model) {
             self.visionModel = visionModel
             request = VNCoreMLRequest(model: visionModel, completionHandler: visionRequestDidComplete)
             request?.imageCropAndScaleOption = .scaleFill
