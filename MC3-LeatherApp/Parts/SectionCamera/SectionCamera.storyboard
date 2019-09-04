@@ -18,18 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-hm-JVR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ube-Pk-slw">
                                 <rect key="frame" x="0.0" y="44" width="414" height="731"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-hm-JVR">
+                                <rect key="frame" x="0.0" y="55" width="414" height="720"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Rkx-hm-JVR" secondAttribute="height" multiplier="414:731" id="TIV-bO-YJf"/>
+                                    <constraint firstAttribute="width" secondItem="Rkx-hm-JVR" secondAttribute="height" multiplier="23:40" id="TKo-rt-4nv"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvP-DI-mPv" customClass="DrawingBoundingBoxView" customModule="MC3_LeatherApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="731"/>
+                                <rect key="frame" x="0.0" y="55" width="414" height="720"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="BvP-DI-mPv" secondAttribute="height" multiplier="414:731" id="Bap-n4-egf"/>
+                                    <constraint firstAttribute="width" secondItem="BvP-DI-mPv" secondAttribute="height" multiplier="23:40" id="cyi-z8-ZJ3"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efN-rh-qyl">
@@ -41,54 +44,122 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="qOZ-Tn-8la" eventType="touchUpInside" id="EEu-yh-18q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzw-VE-f9s">
+                                <rect key="frame" x="326" y="801" width="25" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Mzw-VE-f9s" secondAttribute="height" multiplier="5:9" id="0a8-54-8ad"/>
+                                </constraints>
+                                <state key="normal" image="Flash"/>
+                                <connections>
+                                    <action selector="flashButtonTapped:" destination="qOZ-Tn-8la" eventType="touchUpInside" id="1b0-bE-QU0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Rkx-hm-JVR" firstAttribute="leading" secondItem="ube-Pk-slw" secondAttribute="leading" id="1jH-Mb-og1"/>
                             <constraint firstItem="TqQ-bD-ds8" firstAttribute="trailing" secondItem="efN-rh-qyl" secondAttribute="trailing" constant="170" id="541-Rw-Rdi"/>
-                            <constraint firstItem="TqQ-bD-ds8" firstAttribute="trailing" secondItem="BvP-DI-mPv" secondAttribute="trailing" id="DMY-th-FlB"/>
-                            <constraint firstItem="BvP-DI-mPv" firstAttribute="leading" secondItem="TqQ-bD-ds8" secondAttribute="leading" id="Xaz-Kv-J4d"/>
-                            <constraint firstItem="Rkx-hm-JVR" firstAttribute="top" secondItem="BvP-DI-mPv" secondAttribute="top" id="eYh-xK-g4R"/>
-                            <constraint firstItem="efN-rh-qyl" firstAttribute="top" secondItem="BvP-DI-mPv" secondAttribute="bottom" constant="11" id="fq4-Sf-1M4"/>
+                            <constraint firstItem="Rkx-hm-JVR" firstAttribute="trailing" secondItem="TqQ-bD-ds8" secondAttribute="trailing" id="6xG-TA-3ez"/>
+                            <constraint firstItem="BvP-DI-mPv" firstAttribute="leading" secondItem="TqQ-bD-ds8" secondAttribute="leading" id="72R-ol-NTJ"/>
+                            <constraint firstItem="BvP-DI-mPv" firstAttribute="trailing" secondItem="TqQ-bD-ds8" secondAttribute="trailing" id="DvT-cK-ciN"/>
+                            <constraint firstItem="efN-rh-qyl" firstAttribute="top" secondItem="ube-Pk-slw" secondAttribute="bottom" constant="11" id="H5B-LU-JkL"/>
+                            <constraint firstItem="TqQ-bD-ds8" firstAttribute="trailing" secondItem="Mzw-VE-f9s" secondAttribute="trailing" constant="63" id="LTB-dv-eRb"/>
+                            <constraint firstItem="Rkx-hm-JVR" firstAttribute="top" secondItem="BvP-DI-mPv" secondAttribute="top" id="R99-oq-fvb"/>
+                            <constraint firstItem="Mzw-VE-f9s" firstAttribute="top" secondItem="ube-Pk-slw" secondAttribute="bottom" constant="26" id="Y0E-fv-FV8"/>
+                            <constraint firstItem="Mzw-VE-f9s" firstAttribute="leading" secondItem="efN-rh-qyl" secondAttribute="trailing" constant="82" id="Yj2-6N-abJ"/>
+                            <constraint firstItem="ube-Pk-slw" firstAttribute="top" secondItem="TqQ-bD-ds8" secondAttribute="top" id="Ypb-wo-QJp"/>
+                            <constraint firstItem="Rkx-hm-JVR" firstAttribute="trailing" secondItem="ube-Pk-slw" secondAttribute="trailing" id="ZTS-uK-AWn"/>
                             <constraint firstItem="efN-rh-qyl" firstAttribute="leading" secondItem="TqQ-bD-ds8" secondAttribute="leading" constant="170" id="fyS-Dw-ofO"/>
-                            <constraint firstItem="TqQ-bD-ds8" firstAttribute="trailing" secondItem="Rkx-hm-JVR" secondAttribute="trailing" id="gid-Mp-Xjf"/>
                             <constraint firstItem="TqQ-bD-ds8" firstAttribute="bottom" secondItem="efN-rh-qyl" secondAttribute="bottom" constant="2" id="hmg-fz-Dri"/>
-                            <constraint firstItem="Rkx-hm-JVR" firstAttribute="bottom" secondItem="BvP-DI-mPv" secondAttribute="bottom" id="sga-mw-yRc"/>
-                            <constraint firstItem="Rkx-hm-JVR" firstAttribute="leading" secondItem="TqQ-bD-ds8" secondAttribute="leading" id="tSr-Z8-pB0"/>
+                            <constraint firstItem="TqQ-bD-ds8" firstAttribute="bottom" secondItem="Mzw-VE-f9s" secondAttribute="bottom" constant="16" id="m4r-nu-hqg"/>
+                            <constraint firstItem="Rkx-hm-JVR" firstAttribute="leading" secondItem="TqQ-bD-ds8" secondAttribute="leading" id="nTL-nS-oFG"/>
+                            <constraint firstItem="efN-rh-qyl" firstAttribute="top" secondItem="BvP-DI-mPv" secondAttribute="bottom" constant="11" id="wSo-V1-dx2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TqQ-bD-ds8"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hzM-1b-Q02">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Q8P-Fh-J2j"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="boxesView" destination="BvP-DI-mPv" id="b3U-KU-F4p"/>
                         <outlet property="cameraButton" destination="efN-rh-qyl" id="Pkb-fK-Dzx"/>
+                        <outlet property="flashButton" destination="Mzw-VE-f9s" id="tOL-3c-Wp6"/>
+                        <outlet property="snapshotImage" destination="ube-Pk-slw" id="lum-HD-UhQ"/>
                         <outlet property="videoPreview" destination="Rkx-hm-JVR" id="jas-lq-02i"/>
-                        <segue destination="jp8-QL-1tz" kind="show" id="4nd-tq-6Cp"/>
+                        <segue destination="jp8-QL-1tz" kind="show" identifier="sectionCameraSegue" id="4nd-tq-6Cp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGF-dw-RKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-784.05797101449286" y="-141.29464285714286"/>
+            <point key="canvasLocation" x="126.08695652173914" y="-141.29464285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--Section Camera View Controller-->
         <scene sceneID="2KB-kr-3W2">
             <objects>
-                <viewController id="jp8-QL-1tz" sceneMemberID="viewController">
+                <viewController id="jp8-QL-1tz" customClass="SectionCameraViewController" customModule="MC3_LeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WTn-U9-HZY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cON-rL-uuw">
-                                <rect key="frame" x="0.0" y="95" width="414" height="688"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cON-rL-uuw">
+                                <rect key="frame" x="0.0" y="84" width="414" height="688"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7M-ce-H9o">
+                                <rect key="frame" x="163" y="788" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKG-XR-2jA">
+                                <rect key="frame" x="323" y="783" width="55" height="30"/>
+                                <state key="normal" title="Confirm"/>
+                                <connections>
+                                    <action selector="confirmButtonTapped:" destination="jp8-QL-1tz" eventType="touchUpInside" id="ea0-IU-tOC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FKG-XR-2jA" firstAttribute="top" secondItem="cON-rL-uuw" secondAttribute="bottom" constant="11" id="1Fg-En-a4M"/>
+                            <constraint firstItem="FKG-XR-2jA" firstAttribute="top" secondItem="cON-rL-uuw" secondAttribute="bottom" constant="11" id="CE9-89-Zhu"/>
+                            <constraint firstItem="dDY-Bb-gTu" firstAttribute="bottom" secondItem="FKG-XR-2jA" secondAttribute="bottom" constant="49" id="EZx-QV-Nkw"/>
+                            <constraint firstItem="dDY-Bb-gTu" firstAttribute="trailing" secondItem="FKG-XR-2jA" secondAttribute="trailing" constant="36" id="HKo-mY-vcn"/>
+                            <constraint firstItem="p7M-ce-H9o" firstAttribute="top" secondItem="cON-rL-uuw" secondAttribute="bottom" constant="16" id="bft-qG-cdf"/>
+                            <constraint firstItem="FKG-XR-2jA" firstAttribute="leading" secondItem="p7M-ce-H9o" secondAttribute="trailing" constant="72" id="d0i-pA-pg3"/>
+                            <constraint firstItem="dDY-Bb-gTu" firstAttribute="bottom" secondItem="p7M-ce-H9o" secondAttribute="bottom" constant="53" id="fc8-0D-1gh"/>
+                            <constraint firstItem="cON-rL-uuw" firstAttribute="top" secondItem="dDY-Bb-gTu" secondAttribute="top" constant="40" id="imv-MC-0HI"/>
+                            <constraint firstItem="cON-rL-uuw" firstAttribute="trailing" secondItem="dDY-Bb-gTu" secondAttribute="trailing" id="mZm-Vg-Rig"/>
+                            <constraint firstItem="cON-rL-uuw" firstAttribute="leading" secondItem="dDY-Bb-gTu" secondAttribute="leading" id="wRD-zt-aoU"/>
+                            <constraint firstItem="p7M-ce-H9o" firstAttribute="leading" secondItem="dDY-Bb-gTu" secondAttribute="leading" constant="163" id="yBO-BT-MRp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dDY-Bb-gTu"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmButton" destination="FKG-XR-2jA" id="eqk-rz-JLK"/>
+                        <outlet property="percentageLabel" destination="p7M-ce-H9o" id="oeA-AB-58g"/>
+                        <outlet property="screenshotView" destination="WTn-U9-HZY" id="yse-T1-Sy5"/>
+                        <outlet property="sectionImg" destination="cON-rL-uuw" id="HCv-fB-htW"/>
+                        <segue destination="6Ng-Xg-lnG" kind="show" identifier="backtosection" id="nbw-OP-yLQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfS-ch-8EH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="179.71014492753625" y="-141.29464285714286"/>
+            <point key="canvasLocation" x="1089.8550724637682" y="-141.29464285714286"/>
+        </scene>
+        <!--SectionEdit-->
+        <scene sceneID="Qgq-gb-NBd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SectionEdit" id="6Ng-Xg-lnG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="buy-ly-uEU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1916" y="-87"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Flash" width="1992" height="3040"/>
+    </resources>
 </document>

@@ -10,103 +10,65 @@ import UIKit
 
 class SectionEditViewController: UIViewController {
 
+    @IBOutlet weak var totalPercentageLabel: UILabel!
     @IBOutlet weak var leatherImageView: UIImageView!
     
     @IBOutlet weak var testImage: UIImageView!
     
-    
+    var sectionnumber = Int()
+    var sectionbool = [Bool]()
+    var total:Double = 0
     override func viewDidLoad() {
+        
+        if(System.percentage.count == 0)
+        {
+            total = 0
+        }
+        else
+        {
+            for i in 0...System.percentage.count-1
+            {
+                total = total + System.percentage[i]
+            }
+            total = total / Double(System.percentage.count)
+        }
+        
+        
+        totalPercentageLabel.text = String(format: "Total Defects: %.2f%%",total)
+        
         super.viewDidLoad()
         if let leatherImage = System.leatherImage?.image
         {
             leatherImageView.image = leatherImage
         }
         
-        testImage.image = System.emptyImageSections[0].image
+//        testImage.image = System.emptyImageSections[0].image
     }
     
-    @IBAction func button1Tapped(_ sender: Any) {
+    
+    @IBAction func sectionTapped(_ sender: UIButton) {
+       
         
-        let storyboard = UIStoryboard(name: "SectionCamera", bundle: nil)
+        print("ini section \(sender.tag)")
         
-        guard let vc = storyboard.instantiateInitialViewController() else { return }
-        
-        present(vc, animated: true, completion: nil)
-    }
-    @IBAction func button2Tapped(_ sender: Any) {
-        
-         var sectionnumber = 2
-        
-        let storyboard = UIStoryboard(name: "SectionCamera", bundle: nil)
-        
-        guard let vc = storyboard.instantiateInitialViewController() else { return }
-        
-        present(vc, animated: true, completion: nil)
-    }
-    @IBAction func button3Tapped(_ sender: Any) {
-        
-         var sectionnumber = 3
-        
-        let storyboard = UIStoryboard(name: "SectionCamera", bundle: nil)
-        
-        guard let vc = storyboard.instantiateInitialViewController() else { return }
-        
-        present(vc, animated: true, completion: nil)
+        System.number = sender.tag
+        if(System.savedDone[System.number!] == false)
+        {
+            performSegue(withIdentifier: "toCameraSection", sender: sender.tag)
+            
+        }
+        else if(System.savedDone[System.number!] == true){
+            performSegue(withIdentifier: "viewdetailsection", sender: sender.tag)
+        }
         
     }
-    @IBAction func button4Tapped(_ sender: Any) {
-        
-         var sectionnumber = 4
-        
-        let storyboard = UIStoryboard(name: "SectionCamera", bundle: nil)
-        
-        guard let vc = storyboard.instantiateInitialViewController() else { return }
-        
-        present(vc, animated: true, completion: nil)
-        
-    }
-    @IBAction func button5Tapped(_ sender: Any) {
-        
-        var sectionnumber = 5
-        
-        let storyboard = UIStoryboard(name: "SectionCamera", bundle: nil)
-        
-        guard let vc = storyboard.instantiateInitialViewController() else { return }
-        
-        present(vc, animated: true, completion: nil)
-        
-    }
-    @IBAction func button6Tapped(_ sender: Any) {
-        
-         var sectionnumber = 6
-        
-        let storyboard = UIStoryboard(name: "SectionCamera", bundle: nil)
-        
-        guard let vc = storyboard.instantiateInitialViewController() else { return }
-        
-        present(vc, animated: true, completion: nil)
-        
-    }
-    @IBAction func button7Tapped(_ sender: Any) {
-        
-         var sectionnumber = 7
-        
-        let storyboard = UIStoryboard(name: "SectionCamera", bundle: nil)
-        
-        guard let vc = storyboard.instantiateInitialViewController() else { return }
-        
-        present(vc, animated: true, completion: nil)
-        
-    }
-    @IBAction func button8Tapped(_ sender: Any) {
-        
-         var sectionnumber = 8
-        
-        let storyboard = UIStoryboard(name: "SectionCamera", bundle: nil)
-        
-        guard let vc = storyboard.instantiateInitialViewController() else { return }
-        
-        present(vc, animated: true, completion: nil)
-        
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
+        if let viewController = segue.destination as? SectionCamera
+        {
+            viewController.sectionNumberResult = System.number!
+        }
     }
 }
+

@@ -18,7 +18,7 @@ public protocol VideoCaptureDelegate: class {
 public class VideoCapture: NSObject {
     public var previewLayer: AVCaptureVideoPreviewLayer?
     public weak var delegate: VideoCaptureDelegate?
-    public var fps = 15
+    public var fps = 30
     
 //    private var permissionGranted = false
     
@@ -106,6 +106,10 @@ public class VideoCapture: NSObject {
         
         let success = true
         completion(success)
+        
+        
+        
+        
     }
     
     public func start() {
@@ -135,19 +139,32 @@ extension VideoCapture: AVCaptureVideoDataOutputSampleBufferDelegate {
             delegate?.videoCapture(self, didCaptureVideoFrame: imageBuffer, timestamp: timestamp)
             
             
-            print("Got a frame! \(i)")
-            i = i + 1
+//            i = i + 1
+//            if (i%30 == 0){
+//                print("Got a frame! \(i)")
+//            
+//            }
             
             
-            DispatchQueue.main.async {
-                if (i%5 == 0)
-                {
+//            DispatchQueue.main.async {
+//                i = i + 1
+//                if (i%30 == 0)
+//                {
+//                let image = self.imageFromSampleBuffer(sampleBuffer: sampleBuffer)
+//
+//                let newFigure = Figures(image: image!)
+////
+//                FiguresArray.append(newFigure)
+//                }
+//            }
+            
+            if System.appendController == true
+            {
                 let image = self.imageFromSampleBuffer(sampleBuffer: sampleBuffer)
                 
-//                let newFigure = Figures(image: image!)
-//                
-//                FiguresArray.append(newFigure)
-                }
+                let newFigure = Figures(image: image!)
+                
+                FiguresArray.append(newFigure)
             }
             
 

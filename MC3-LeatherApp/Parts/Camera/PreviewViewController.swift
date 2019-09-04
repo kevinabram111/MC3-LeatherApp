@@ -20,9 +20,9 @@ class PreviewViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func cancelButton_TouchUpInside(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
+//    @IBAction func cancelButton_TouchUpInside(_ sender: UIButton) {
+//        dismiss(animated: true, completion: nil)
+//    }
     
     // @IBAction func saveButton_TouchUpInside(_ sender: UIButton) {
     // }
@@ -41,21 +41,26 @@ class PreviewViewController: UIViewController {
         let imageWidth = photoView.contentClippingRect.width
         let imageHeight = photoView.contentClippingRect.height
         
-        let section1Image = cropImage(image, toRect: CGRect(x: 0, y: 0, width: imageWidth/2, height: imageHeight/4), viewWidth: imageWidth, viewHeight: imageHeight)!
+        guard
         
-        let section2Image = cropImage(image, toRect: CGRect(x: imageWidth/2, y: 0, width: imageWidth/2, height: imageHeight/4), viewWidth: imageWidth, viewHeight: imageHeight)!
+        let section1Image = cropImage(image, toRect: CGRect(x: 0, y: 0, width: imageWidth/2, height: imageHeight/4), viewWidth: imageWidth, viewHeight: imageHeight),
         
-        let section3Image = cropImage(image, toRect: CGRect(x: 0, y: imageHeight*1/4, width: imageWidth/2, height: imageHeight/4), viewWidth: imageWidth, viewHeight: imageHeight)!
+        let section2Image = cropImage(image, toRect: CGRect(x: imageWidth/2, y: 0, width: imageWidth/2, height: imageHeight/4), viewWidth: imageWidth, viewHeight: imageHeight),
         
-        let section4Image = cropImage(image, toRect: CGRect(x: imageWidth/2, y: imageHeight*1/4, width: imageWidth/2, height: imageHeight/4), viewWidth: imageWidth, viewHeight: imageHeight)!
+        let section3Image = cropImage(image, toRect: CGRect(x: 0, y: imageHeight*1/4, width: imageWidth/2, height: imageHeight/4), viewWidth: imageWidth, viewHeight: imageHeight),
         
-        let section5Image = cropImage(image, toRect: CGRect(x: 0, y: imageHeight*2/4, width: imageWidth/2, height: imageHeight/4), viewWidth: imageWidth, viewHeight: imageHeight)!
+        let section4Image = cropImage(image, toRect: CGRect(x: imageWidth/2, y: imageHeight*1/4, width: imageWidth/2, height: imageHeight/4), viewWidth: imageWidth, viewHeight: imageHeight),
         
-        let section6Image = cropImage(image, toRect: CGRect(x: imageWidth/2, y: imageHeight*2/4, width: imageWidth/2, height: imageHeight/4), viewWidth: imageWidth, viewHeight: imageHeight)!
+        let section5Image = cropImage(image, toRect: CGRect(x: 0, y: imageHeight*2/4, width: imageWidth/2, height: imageHeight/4), viewWidth: imageWidth, viewHeight: imageHeight),
         
-        let section7Image = cropImage(image, toRect: CGRect(x: 0, y: imageHeight*3/4, width: imageWidth/2, height: imageHeight/4), viewWidth: imageWidth, viewHeight: imageHeight)!
+        let section6Image = cropImage(image, toRect: CGRect(x: imageWidth/2, y: imageHeight*2/4, width: imageWidth/2, height: imageHeight/4), viewWidth: imageWidth, viewHeight: imageHeight)
         
-        let section8Image = cropImage(image, toRect: CGRect(x: imageWidth/2, y: imageHeight*3/4, width: imageWidth/2, height: imageHeight/4), viewWidth: imageWidth, viewHeight: imageHeight)!
+//        let section7Image = cropImage(image, toRect: CGRect(x: 0, y: imageHeight*3/4, width: imageWidth/2, height: imageHeight/4), viewWidth: imageWidth, viewHeight: imageHeight),
+//
+//        let section8Image = cropImage(image, toRect: CGRect(x: imageWidth/2, y: imageHeight*3/4, width: imageWidth/2, height: imageHeight/4), viewWidth: imageWidth, viewHeight: imageHeight)
+            else {
+                return
+        }
         
         let section1 = EmptyImageSectionObject(section: 1, image: section1Image, width: Double(imageWidth), height: Double(imageHeight))
         
@@ -69,9 +74,9 @@ class PreviewViewController: UIViewController {
         
         let section6 = EmptyImageSectionObject(section: 6, image: section6Image, width: Double(imageWidth), height: Double(imageHeight))
         
-        let section7 = EmptyImageSectionObject(section: 7, image: section7Image, width: Double(imageWidth), height: Double(imageHeight))
-        
-        let section8 = EmptyImageSectionObject(section: 8, image: section8Image, width: Double(imageWidth), height: Double(imageHeight))
+//        let section7 = EmptyImageSectionObject(section: 7, image: section7Image, width: Double(imageWidth), height: Double(imageHeight))
+//
+//        let section8 = EmptyImageSectionObject(section: 8, image: section8Image, width: Double(imageWidth), height: Double(imageHeight))
         
         System.emptyImageSections.append(section1)
         System.emptyImageSections.append(section2)
@@ -79,23 +84,31 @@ class PreviewViewController: UIViewController {
         System.emptyImageSections.append(section4)
         System.emptyImageSections.append(section5)
         System.emptyImageSections.append(section6)
-        System.emptyImageSections.append(section7)
-        System.emptyImageSections.append(section8)
+//        System.emptyImageSections.append(section7)
+//        System.emptyImageSections.append(section8)
         
         performSegue(withIdentifier: "segueEdit", sender: nil)
     }
     
-    func cropImage(_ inputImage: UIImage, toRect cropRect: CGRect, viewWidth: CGFloat, viewHeight: CGFloat) -> UIImage?
+    func cropImage(
+        _ inputImage: UIImage,
+        toRect cropRect: CGRect,
+        viewWidth: CGFloat,
+        viewHeight: CGFloat) -> UIImage?
     {
         let imageViewScale = max(inputImage.size.width / viewWidth,
                                  inputImage.size.height / viewHeight)
+        
+        print(inputImage.size.width)
+        print(inputImage.size.height)
+        print(imageViewScale)
 
         // Scale cropRect to handle images larger than shown-on-screen size
         let cropZone = CGRect(x:cropRect.origin.x * imageViewScale,
                               y:cropRect.origin.y * imageViewScale,
                               width:cropRect.size.width * imageViewScale,
                               height:cropRect.size.height * imageViewScale)
-
+        
         // Perform cropping in Core Graphics
         guard let cutImageRef: CGImage = inputImage.cgImage?.cropping(to:cropZone)
             else {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9y1-l6-0c6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gDq-T8-bV7">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydG-6B-fuB" customClass="SectionButton" customModule="MC3_LeatherApp" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.5" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydG-6B-fuB" customClass="SectionButton" customModule="MC3_LeatherApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="98" width="207" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -31,10 +31,10 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="button1Tapped:" destination="9y1-l6-0c6" eventType="touchUpInside" id="7UW-TP-28O"/>
+                                    <action selector="sectionTapped:" destination="9y1-l6-0c6" eventType="touchUpInside" id="d0S-EL-uug"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2q-JJ-ren" customClass="SectionButton" customModule="MC3_LeatherApp" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.5" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2q-JJ-ren" customClass="SectionButton" customModule="MC3_LeatherApp" customModuleProvider="target">
                                 <rect key="frame" x="207" y="98" width="207" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,10 +42,10 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="button2Tapped:" destination="9y1-l6-0c6" eventType="touchUpInside" id="ELe-v4-ntG"/>
+                                    <action selector="sectionTapped:" destination="9y1-l6-0c6" eventType="touchUpInside" id="823-P9-XSI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLQ-gM-UQj" customClass="SectionButton" customModule="MC3_LeatherApp" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.5" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLQ-gM-UQj" customClass="SectionButton" customModule="MC3_LeatherApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="270" width="207" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,10 +53,10 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="button3Tapped:" destination="9y1-l6-0c6" eventType="touchUpInside" id="pwG-7f-A0E"/>
+                                    <action selector="sectionTapped:" destination="9y1-l6-0c6" eventType="touchUpInside" id="sSC-d9-A6T"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcg-6q-sYK" customClass="SectionButton" customModule="MC3_LeatherApp" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.5" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcg-6q-sYK" customClass="SectionButton" customModule="MC3_LeatherApp" customModuleProvider="target">
                                 <rect key="frame" x="207" y="270" width="207" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -64,10 +64,10 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="button4Tapped:" destination="9y1-l6-0c6" eventType="touchUpInside" id="1uB-Fw-f8g"/>
+                                    <action selector="sectionTapped:" destination="9y1-l6-0c6" eventType="touchUpInside" id="mop-Xf-vJh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBf-jy-mb0" customClass="SectionButton" customModule="MC3_LeatherApp" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.5" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBf-jy-mb0" customClass="SectionButton" customModule="MC3_LeatherApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="442" width="207" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -75,10 +75,10 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="button5Tapped:" destination="9y1-l6-0c6" eventType="touchUpInside" id="lEU-0t-BDE"/>
+                                    <action selector="sectionTapped:" destination="9y1-l6-0c6" eventType="touchUpInside" id="Iwu-wc-njU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zia-T8-MB7" customClass="SectionButton" customModule="MC3_LeatherApp" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.5" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zia-T8-MB7" customClass="SectionButton" customModule="MC3_LeatherApp" customModuleProvider="target">
                                 <rect key="frame" x="207" y="442" width="207" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -86,10 +86,10 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="button6Tapped:" destination="9y1-l6-0c6" eventType="touchUpInside" id="eoG-Er-MLp"/>
+                                    <action selector="sectionTapped:" destination="9y1-l6-0c6" eventType="touchUpInside" id="to8-cd-wtD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4T8-eh-EVQ" customClass="SectionButton" customModule="MC3_LeatherApp" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.5" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4T8-eh-EVQ" customClass="SectionButton" customModule="MC3_LeatherApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="614" width="207" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -97,10 +97,10 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="button7Tapped:" destination="9y1-l6-0c6" eventType="touchUpInside" id="ZNK-nc-Js3"/>
+                                    <action selector="sectionTapped:" destination="9y1-l6-0c6" eventType="touchUpInside" id="yot-Zn-Los"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sa-ig-NBI" customClass="SectionButton" customModule="MC3_LeatherApp" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.5" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sa-ig-NBI" customClass="SectionButton" customModule="MC3_LeatherApp" customModuleProvider="target">
                                 <rect key="frame" x="207" y="614" width="207" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -108,18 +108,87 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="button8Tapped:" destination="9y1-l6-0c6" eventType="touchUpInside" id="7ke-2j-WK3"/>
+                                    <action selector="sectionTapped:" destination="9y1-l6-0c6" eventType="touchUpInside" id="Cd1-Yl-NOA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0a7-Td-SES">
+                                <rect key="frame" x="20" y="819" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="OpR-l2-RAG"/>
                     </view>
+                    <navigationItem key="navigationItem" id="S3Y-bu-Wg9"/>
                     <connections>
                         <outlet property="leatherImageView" destination="0mo-dF-mVR" id="eFY-oi-aEa"/>
+                        <outlet property="totalPercentageLabel" destination="0a7-Td-SES" id="d0Q-vN-nPm"/>
+                        <segue destination="767-re-7mZ" kind="show" identifier="toCameraSection" id="xB1-fe-vdN"/>
+                        <segue destination="Bif-Hh-01b" kind="show" identifier="viewdetailsection" id="odr-JS-2Na"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDq-Y2-nbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1202.8985507246377" y="-10.044642857142856"/>
+        </scene>
+        <!--SectionCamera-->
+        <scene sceneID="dcb-cv-qhA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SectionCamera" id="767-re-7mZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIa-Qb-2KW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1892.0289855072465" y="-139.28571428571428"/>
+        </scene>
+        <!--Section Preview View Controller-->
+        <scene sceneID="D5s-Hp-cN7">
+            <objects>
+                <viewController id="Bif-Hh-01b" customClass="SectionPreviewViewController" customModule="MC3_LeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hsO-iQ-mAa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z5n-Sz-051">
+                                <rect key="frame" x="0.0" y="27" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z5n-Sz-051" firstAttribute="centerX" secondItem="wnH-rJ-T9Q" secondAttribute="centerX" id="B2K-OE-Aor"/>
+                            <constraint firstItem="z5n-Sz-051" firstAttribute="centerY" secondItem="wnH-rJ-T9Q" secondAttribute="centerY" id="cOZ-mh-fS4"/>
+                            <constraint firstItem="z5n-Sz-051" firstAttribute="height" secondItem="hsO-iQ-mAa" secondAttribute="height" id="q4j-Wj-EsU"/>
+                            <constraint firstItem="z5n-Sz-051" firstAttribute="width" secondItem="hsO-iQ-mAa" secondAttribute="width" id="uWx-fd-oo7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wnH-rJ-T9Q"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="P9P-8a-Rcf">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="ttx-nl-kTb"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="previewImage" destination="z5n-Sz-051" id="ATx-hy-ibu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Miz-hW-ZdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3355.072463768116" y="-10.044642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="y6a-gf-4El">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gDq-T8-bV7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="705-6v-Vdi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9y1-l6-0c6" kind="relationship" relationship="rootViewController" id="Hrk-pU-pT9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdR-1R-dTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="292.75362318840581" y="-10.044642857142856"/>
         </scene>

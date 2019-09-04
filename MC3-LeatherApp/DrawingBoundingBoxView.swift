@@ -13,6 +13,8 @@ class DrawingBoundingBoxView: UIView {
     
     static private var colors: [String: UIColor] = [:]
     
+    var i = 0
+    
     public func labelColor(with label: String) -> UIColor {
         if let color = DrawingBoundingBoxView.colors[label] {
             return color
@@ -52,9 +54,6 @@ class DrawingBoundingBoxView: UIView {
         bgView.backgroundColor = UIColor.clear
         addSubview(bgView)
         
-//        let newFigureBoxes = FigureBox(view: bgView)
-//        
-//        FigureBoxesArray.append(newFigureBoxes)
         
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
         label.text = labelString ?? "N/A"
@@ -65,8 +64,27 @@ class DrawingBoundingBoxView: UIView {
         label.frame = CGRect(x: bgRect.origin.x, y: bgRect.origin.y - label.frame.height,
                              width: label.frame.width, height: label.frame.height)
         addSubview(label)
+        
+        if System.appendController == true
+        {
+            let newFigureBoxes = FigureBox(view: bgView, label: label)
+            FigureBoxesArray.append(newFigureBoxes)
+        }
+        
+//        DispatchQueue.main.async {
+//            self.i = self.i + 1
+//            if (self.i%30 == 0)
+//            {
+//                //                let image = self.imageFromSampleBuffer(sampleBuffer: sampleBuffer)
+//
+//                let newFigureBoxes = FigureBox(view: bgView, label: label)
+//
+//                //
+//                FigureBoxesArray.append(newFigureBoxes)
+//            }
     }
-}
+        
+    }
 
 extension VNRecognizedObjectObservation {
     var label: String? {

@@ -9,14 +9,20 @@
 import UIKit
 import Vision
 import CoreMedia
+import AVFoundation
 
-class SectionCamera: UIViewController {
+class SectionCamera: UIViewController{
     
     @IBOutlet weak var videoPreview: UIView!
+    @IBOutlet weak var snapshotImage: UIImageView!
     
+    @IBOutlet weak var flashButton: UIButton!
     @IBOutlet weak var boxesView: DrawingBoundingBoxView!
     
     @IBOutlet weak var cameraButton: UIButton!
+    
+    var sectionNumberResult = System.number
+    var i = 0
     
     let objectDetectionModel = YOLOv3Tiny()
     
@@ -37,18 +43,20 @@ class SectionCamera: UIViewController {
     private let performanceMeasurement = 📏()
     
     //MARK: - Timer
-    var timerSeconds = 6
+    var timerSeconds = 1
     var timer = Timer()
+    
+    var image: UIImage?
     
     
     //    let maf1 = MovingAverageFilter()
     //    let maf2 = MovingAverageFilter()
     //    let maf3 = MovingAverageFilter()
-    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
-        
+        print(sectionNumberResult)
         
         cameraButton.layer.cornerRadius = cameraButton.frame.width/2
         
@@ -58,16 +66,49 @@ class SectionCamera: UIViewController {
         // setup camera
         setUpCamera()
         
-        
+        navigationController?.navigationBar.barTintColor = UIColor.clear
         
         // setup delegate for performance measurement
         //        performanceMeasurement.delegate = self
         
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    func toggleTorch(on: Bool) {
+        guard let device = AVCaptureDevice.default(for: .video) else { return }
+        
+        if device.hasTorch {
+            do {
+                try device.lockForConfiguration()
+                
+                if on == true {
+                    device.torchMode = .on
+                } else {
+                    device.torchMode = .off
+                }
+                
+                device.unlockForConfiguration()
+            } catch {
+                print("Torch could not be used")
+            }
+        } else {
+            print("Torch is not available")
+        }
+    }
+    
+    
+    
     func runTimer()
     {
-        timerSeconds = 5
+        timerSeconds = 1
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
     }
     
@@ -78,7 +119,9 @@ class SectionCamera: UIViewController {
         if timerSeconds == 0
         {
             timer.invalidate()
-            performSegue(withIdentifier: "showFigures", sender: nil)
+            performSegue(withIdentifier: "sectionCameraSegue", sender: nil)
+            self.videoCapture.stop()
+            System.appendController = false
         }
     }
     
@@ -96,9 +139,9 @@ class SectionCamera: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        timerSeconds = 6
+        //timerSeconds = 6
         cameraButton.isEnabled = true
-        // self.videoCapture.start()
+         self.videoCapture.start()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -147,15 +190,57 @@ class SectionCamera: UIViewController {
     }
     
     
+    @IBAction func flashButtonTapped(_ sender: UIButton) {
+        
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
+        
+        sender.isSelected = !sender.isSelected
+        let toggleSelected = sender.isSelected
+        
+        let flashOnImage = UIImage(named: "FlashNyala")
+        let flashOffImage = UIImage(named: "Flash")
+        
+        if toggleSelected{
+            toggleTorch(on: true)
+            flashButton.setImage(flashOnImage, for: UIControl.State.normal)
+            //            print("nyala")
+        }else{
+            toggleTorch(on: false)
+            flashButton.setImage(flashOffImage, for: UIControl.State.normal)
+            //            print("mati")
+        }
+        
+    }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
+//        self.videoCapture.start()
+////        runTimer()
+//        self.cameraButton.isEnabled = false
+//
+//        self.cameraButton.isHidden = true
+//
+//        navigationController?.navigationBar.barTintColor = UIColor.white
+//
+//        self.view.backgroundColor = UIColor.white
+//
+//        self.videoPreview.backgroundColor = UIColor.white
+//
+//        self.videoCapture.stop()
+//
+//        snapshotImage.image = videoPreview.asImage()
+//        snapshotImage.image = boxesView.asImage()
+        
+//        performSegue(withIdentifier: "sectionCameraSegue", sender: nil)
+        cameraButton.isEnabled = false
+        FiguresArray.removeAll()
+        FigureBoxesArray.removeAll()
+        System.appendController = true
         self.videoCapture.start()
         runTimer()
-        self.cameraButton.isEnabled = false
     }
     
 }
-
 // MARK: - VideoCaptureDelegate
 extension SectionCamera: VideoCaptureDelegate {
     func videoCapture(_ capture: VideoCapture, didCaptureVideoFrame pixelBuffer: CVPixelBuffer?, timestamp: CMTime) {
@@ -261,4 +346,59 @@ class MovingAverageFilter {
         return Int(Double(sum) / Double(arr.count))
     }
 
+}
+
+extension UIApplication { func makeSnapshot() -> UIImage? { return keyWindow?.layer.makeSnapshot() } }
+
+extension CALayer {
+    func makeSnapshot() -> UIImage? {
+        let scale = UIScreen.main.scale
+        UIGraphicsBeginImageContextWithOptions(frame.size, false, scale)
+        defer { UIGraphicsEndImageContext() }
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        render(in: context)
+        let screenshot = UIGraphicsGetImageFromCurrentImageContext()
+        return screenshot
+    }
+}
+
+extension UIView {
+    func makeSnapshot() -> UIImage? {
+        if #available(iOS 10.0, *) {
+            let renderer = UIGraphicsImageRenderer(size: frame.size)
+            return renderer.image { _ in drawHierarchy(in: bounds, afterScreenUpdates: true) }
+        } else {
+            return layer.makeSnapshot()
+        }
+    }
+}
+
+extension UIImage {
+    convenience init?(snapshotOf view: UIView) {
+        guard let image = view.makeSnapshot(), let cgImage = image.cgImage else { return nil }
+        self.init(cgImage: cgImage, scale: image.scale, orientation: image.imageOrientation)
+    }
+}
+//MARK: snapshot usage
+//imageView.image = UIApplication.shared.makeSnapshot()
+//
+//// or
+//imageView.image = view.makeSnapshot()
+//
+//// or
+//imageView.image = view.layer.makeSnapshot()
+//
+//// or
+//imageView.image = UIImage(snapshotOf: view)
+
+extension UIView {
+    
+    // Using a function since `var image` might conflict with an existing variable
+    // (like on `UIImageView`)
+    func asImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image { rendererContext in
+            layer.render(in: rendererContext.cgContext)
+        }
+    }
 }

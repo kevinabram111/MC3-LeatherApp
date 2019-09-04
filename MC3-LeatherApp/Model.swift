@@ -17,6 +17,10 @@ import UIKit
 
 struct System
 {
+    static var number: Int?
+    
+    static var appendController: Bool?
+    
     //To store the leatherImage.
     static var leatherImage: LeatherImageObject?
     
@@ -36,6 +40,11 @@ struct System
             }
         return defectIncrement
     }
+    
+    static var savedPictures = [UIImage]()
+    static var savedDone = [Bool]()
+    static var percentage = [Double]()
+
 }
 
 //
