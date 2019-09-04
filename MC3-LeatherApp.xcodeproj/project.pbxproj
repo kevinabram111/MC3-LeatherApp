@@ -10,7 +10,6 @@
 		43322B51231C1FBF00D0CCB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43322B50231C1FBF00D0CCB2 /* AppDelegate.swift */; };
 		43322B53231C1FBF00D0CCB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43322B52231C1FBF00D0CCB2 /* ViewController.swift */; };
 		43322B56231C1FBF00D0CCB2 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43322B54231C1FBF00D0CCB2 /* Camera.storyboard */; };
-		43322B58231C1FC000D0CCB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43322B57231C1FC000D0CCB2 /* Assets.xcassets */; };
 		43322B5B231C1FC000D0CCB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43322B59231C1FC000D0CCB2 /* LaunchScreen.storyboard */; };
 		43322B63231C1FD400D0CCB2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43322B62231C1FD400D0CCB2 /* Model.swift */; };
 		43322B6E231C2EA200D0CCB2 /* SectionEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43322B6D231C2EA200D0CCB2 /* SectionEdit.storyboard */; };
@@ -26,6 +25,7 @@
 		86802C8C231E4954003BA379 /* LeatherDefectsCategorizedObjectDetection.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 86802C8B231E4954003BA379 /* LeatherDefectsCategorizedObjectDetection.mlmodel */; };
 		86802C90231E4AA5003BA379 /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 86802C8F231E4AA5003BA379 /* YOLOv3Tiny.mlmodel */; };
 		86BD37DE231FE6260062C9B2 /* SectionPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BD37DD231FE6260062C9B2 /* SectionPreviewViewController.swift */; };
+		86BD37E02320459F0062C9B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86BD37DF2320459F0062C9B2 /* Assets.xcassets */; };
 		B19554A7231CDE1900252996 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19554A2231CDE1900252996 /* OnboardingController.swift */; };
 		B19554A8231CDE1900252996 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19554A3231CDE1900252996 /* OnBoarding.storyboard */; };
 		B19554A9231CDE1900252996 /* GetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19554A4231CDE1900252996 /* GetStarted.swift */; };
@@ -41,7 +41,6 @@
 		43322B50231C1FBF00D0CCB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43322B52231C1FBF00D0CCB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		43322B55231C1FBF00D0CCB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Camera.storyboard; sourceTree = "<group>"; };
-		43322B57231C1FC000D0CCB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43322B5A231C1FC000D0CCB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43322B5C231C1FC000D0CCB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43322B62231C1FD400D0CCB2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		86802C8B231E4954003BA379 /* LeatherDefectsCategorizedObjectDetection.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = LeatherDefectsCategorizedObjectDetection.mlmodel; sourceTree = "<group>"; };
 		86802C8F231E4AA5003BA379 /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
 		86BD37DD231FE6260062C9B2 /* SectionPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionPreviewViewController.swift; sourceTree = "<group>"; };
+		86BD37DF2320459F0062C9B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B19554A2231CDE1900252996 /* OnboardingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingController.swift; path = "MC3-LeatherApp/Parts/Onboarding/OnboardingController.swift"; sourceTree = SOURCE_ROOT; };
 		B19554A3231CDE1900252996 /* OnBoarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = OnBoarding.storyboard; path = "MC3-LeatherApp/Parts/Onboarding/OnBoarding.storyboard"; sourceTree = SOURCE_ROOT; };
 		B19554A4231CDE1900252996 /* GetStarted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetStarted.swift; path = "MC3-LeatherApp/Parts/Onboarding/GetStarted.swift"; sourceTree = SOURCE_ROOT; };
@@ -106,8 +106,8 @@
 				4351A9FC231CE39D00E2294F /* Measure.swift */,
 				4351A9FE231CE39E00E2294F /* UIImage+CVPixelBuffer.swift */,
 				4351A9FD231CE39E00E2294F /* VideoCapture.swift */,
-				43322B57231C1FC000D0CCB2 /* Assets.xcassets */,
 				43322B59231C1FC000D0CCB2 /* LaunchScreen.storyboard */,
+				86BD37DF2320459F0062C9B2 /* Assets.xcassets */,
 				43322B5C231C1FC000D0CCB2 /* Info.plist */,
 			);
 			path = "MC3-LeatherApp";
@@ -240,7 +240,7 @@
 				43322B6E231C2EA200D0CCB2 /* SectionEdit.storyboard in Resources */,
 				43322B5B231C1FC000D0CCB2 /* LaunchScreen.storyboard in Resources */,
 				B19554AB231CDE1900252996 /* Slide.xib in Resources */,
-				43322B58231C1FC000D0CCB2 /* Assets.xcassets in Resources */,
+				86BD37E02320459F0062C9B2 /* Assets.xcassets in Resources */,
 				43322B56231C1FBF00D0CCB2 /* Camera.storyboard in Resources */,
 				B19554A8231CDE1900252996 /* OnBoarding.storyboard in Resources */,
 			);

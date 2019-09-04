@@ -127,6 +127,7 @@ class SectionCameraViewController: UIViewController{
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         confirmButton.isHidden = true
+        navigationController?.navigationBar.barTintColor = UIColor.black
     }
     override func viewWillAppear(_ animated: Bool) {
     

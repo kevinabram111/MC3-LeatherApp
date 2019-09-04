@@ -66,16 +66,24 @@ class SectionCamera: UIViewController{
         // setup camera
         setUpCamera()
         
-        navigationController?.navigationBar.barTintColor = UIColor.clear
-        
+        navigationController?.navigationBar.barTintColor = UIColor.black
         // setup delegate for performance measurement
         //        performanceMeasurement.delegate = self
         
     }
     
+//    override func awakeFromNib() {
+//        navigationController?.navigationBar.barTintColor = UIColor.black
+//    }
+//
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(true)
+//
+//        navigationController?.navigationBar.barTintColor = UIColor.black
+//    }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -125,14 +133,6 @@ class SectionCamera: UIViewController{
         }
     }
     
-    override var prefersStatusBarHidden: Bool{
-        return true
-    }
-    
-    //    override var preferredStatusBarStyle: UIStatusBarStyle {
-    //        return .lightContent
-    //    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -147,6 +147,7 @@ class SectionCamera: UIViewController{
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.videoCapture.stop()
+        navigationController?.navigationBar.barTintColor = UIColor.white
     }
     
     // MARK: - Setup Core ML

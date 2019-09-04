@@ -19,6 +19,7 @@ class SectionEditViewController: UIViewController {
     var sectionbool = [Bool]()
     var total:Double = 0
     override func viewDidLoad() {
+        navigationController?.navigationBar.barTintColor = UIColor.white
         
         if(System.percentage.count == 0)
         {
@@ -34,7 +35,7 @@ class SectionEditViewController: UIViewController {
         }
         
         
-        totalPercentageLabel.text = String(format: "Total Defects: %.2f%%",total)
+        totalPercentageLabel.text = String(format: "Leather Quality: %.2f%%",total)
         
         super.viewDidLoad()
         if let leatherImage = System.leatherImage?.image

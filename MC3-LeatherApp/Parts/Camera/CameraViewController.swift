@@ -55,7 +55,7 @@ class CameraViewController: UIViewController {
         
         //  settings.flashMode = .on
         
-        photoOutput?.capturePhoto(with: settings, delegate: self as! AVCapturePhotoCaptureDelegate)
+        photoOutput?.capturePhoto(with: settings, delegate: self as AVCapturePhotoCaptureDelegate)
         
         //        performSegue(withIdentifier: "showPhoto_Segue", sender: nil)
     }
@@ -63,6 +63,20 @@ class CameraViewController: UIViewController {
     {
         captureSession.startRunning()
     }
+    
+//    var statusBarHidden = true {
+//        didSet(newValue) {
+//            setNeedsStatusBarAppearanceUpdate()
+//        }
+//    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+//    override var preferredStatusBarStyle: UIStatusBarStyle {
+//        return .lightContent
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
