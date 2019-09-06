@@ -13,13 +13,13 @@
         <!--Camera View Controller-->
         <scene sceneID="bmb-9O-aVo">
             <objects>
-                <viewController id="TzM-zb-vBy" customClass="CameraViewController" customModule="MC3_LeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TzM-zb-vBy" customClass="CameraViewController" customModule="Scanter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m71-2F-y9t">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8J-e1-Qye">
-                                <rect key="frame" x="170" y="758" width="74" height="74"/>
+                                <rect key="frame" x="170" y="670" width="74" height="74"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Y8J-e1-Qye" secondAttribute="height" multiplier="1:1" id="33G-cs-E27"/>
@@ -50,13 +50,13 @@
         <!--Preview View Controller-->
         <scene sceneID="yHl-c2-9bR">
             <objects>
-                <viewController id="zh1-kR-2TJ" customClass="PreviewViewController" customModule="MC3_LeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zh1-kR-2TJ" customClass="PreviewViewController" customModule="Scanter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MGj-Qf-n2E">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLp-Xe-8cO">
-                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="708" width="414" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XG-ae-wtg">
                                         <rect key="frame" x="157" y="18" width="100" height="30"/>
@@ -69,18 +69,19 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" red="0.3411764705882353" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="1XG-ae-wtg" firstAttribute="bottom" secondItem="KLp-Xe-8cO" secondAttribute="bottomMargin" constant="-10" id="dN9-Uw-jXh"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AmH-gt-lWq">
-                                <rect key="frame" x="0.0" y="88" width="414" height="688"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="688"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="AmH-gt-lWq" secondAttribute="height" multiplier="207:344" id="QJO-Al-4zo"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.3411764705882353" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AmH-gt-lWq" firstAttribute="trailing" secondItem="BSE-cI-Nce" secondAttribute="trailing" id="KAY-vc-S7d"/>
                             <constraint firstItem="KLp-Xe-8cO" firstAttribute="leading" secondItem="BSE-cI-Nce" secondAttribute="leading" id="NYR-du-MZs"/>
@@ -114,9 +115,10 @@
         <scene sceneID="G36-1g-RRb">
             <objects>
                 <navigationController id="S2y-vn-zzS" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="80G-mn-iG8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="80G-mn-iG8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.3411764705882353" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="TzM-zb-vBy" kind="relationship" relationship="rootViewController" id="sLk-50-SBB"/>

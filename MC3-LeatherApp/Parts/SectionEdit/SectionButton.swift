@@ -14,7 +14,8 @@ class SectionButton: UIButton {
         self.layer.borderColor = UIColor.white.cgColor
         self.layer.borderWidth = 1
         self.backgroundColor = .brown
-        self.setTitle("Add Detail Photo", for: .normal)
+   //     self.setTitle("Add Detail Photo", for: .normal)
+        self.setTitle("", for: .normal)
     }
     /*
     // Only override draw() if you perform custom drawing.

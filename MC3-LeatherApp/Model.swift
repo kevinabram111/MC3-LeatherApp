@@ -44,6 +44,7 @@ struct System
     static var savedPictures = [UIImage]()
     static var savedDone = [Bool]()
     static var percentage = [Double]()
+    static var percentageSave: [Double] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
 }
 

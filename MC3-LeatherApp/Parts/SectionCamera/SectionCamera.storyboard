@@ -13,7 +13,7 @@
         <!--Section Camera-->
         <scene sceneID="7wR-NE-C4d">
             <objects>
-                <viewController id="qOZ-Tn-8la" customClass="SectionCamera" customModule="MC3_LeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qOZ-Tn-8la" customClass="SectionCamera" customModule="Scanter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kp8-J4-UkK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                                     <constraint firstAttribute="width" secondItem="Rkx-hm-JVR" secondAttribute="height" multiplier="23:40" id="TKo-rt-4nv"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvP-DI-mPv" customClass="DrawingBoundingBoxView" customModule="MC3_LeatherApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvP-DI-mPv" customClass="DrawingBoundingBoxView" customModule="Scanter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55" width="414" height="720"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -100,7 +100,7 @@
         <!--Section Camera View Controller-->
         <scene sceneID="2KB-kr-3W2">
             <objects>
-                <viewController id="jp8-QL-1tz" customClass="SectionCameraViewController" customModule="MC3_LeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jp8-QL-1tz" customClass="SectionCameraViewController" customModule="Scanter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WTn-U9-HZY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,7 +111,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7M-ce-H9o">
                                 <rect key="frame" x="163" y="820" width="88" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKG-XR-2jA">
@@ -121,18 +121,27 @@
                                     <action selector="confirmButtonTapped:" destination="jp8-QL-1tz" eventType="touchUpInside" id="ea0-IU-tOC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leather Quality:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6b-Gv-Bq5">
+                                <rect key="frame" x="139" y="791" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.3411764705882353" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dDY-Bb-gTu" firstAttribute="trailing" secondItem="FKG-XR-2jA" secondAttribute="trailing" constant="35" id="L5L-Hg-lQZ"/>
                             <constraint firstItem="FKG-XR-2jA" firstAttribute="top" secondItem="cON-rL-uuw" secondAttribute="bottom" constant="49" id="XZs-v9-fwo"/>
                             <constraint firstItem="p7M-ce-H9o" firstAttribute="top" secondItem="cON-rL-uuw" secondAttribute="bottom" constant="56" id="bft-qG-cdf"/>
                             <constraint firstItem="dDY-Bb-gTu" firstAttribute="bottom" secondItem="FKG-XR-2jA" secondAttribute="bottom" constant="13" id="cRk-4A-att"/>
                             <constraint firstItem="FKG-XR-2jA" firstAttribute="leading" secondItem="p7M-ce-H9o" secondAttribute="trailing" constant="73" id="dri-im-Y6b"/>
+                            <constraint firstItem="h6b-Gv-Bq5" firstAttribute="leading" secondItem="dDY-Bb-gTu" secondAttribute="leading" constant="139" id="efo-E5-brV"/>
                             <constraint firstItem="dDY-Bb-gTu" firstAttribute="bottom" secondItem="p7M-ce-H9o" secondAttribute="bottom" constant="21" id="fc8-0D-1gh"/>
                             <constraint firstItem="cON-rL-uuw" firstAttribute="top" secondItem="dDY-Bb-gTu" secondAttribute="top" id="imv-MC-0HI"/>
                             <constraint firstItem="cON-rL-uuw" firstAttribute="trailing" secondItem="dDY-Bb-gTu" secondAttribute="trailing" id="mZm-Vg-Rig"/>
                             <constraint firstItem="cON-rL-uuw" firstAttribute="leading" secondItem="dDY-Bb-gTu" secondAttribute="leading" id="wRD-zt-aoU"/>
+                            <constraint firstItem="h6b-Gv-Bq5" firstAttribute="centerX" secondItem="p7M-ce-H9o" secondAttribute="centerX" id="xeY-S6-P2L"/>
+                            <constraint firstItem="p7M-ce-H9o" firstAttribute="top" secondItem="h6b-Gv-Bq5" secondAttribute="bottom" constant="8" symbolic="YES" id="xvA-ql-S8d"/>
                             <constraint firstItem="p7M-ce-H9o" firstAttribute="leading" secondItem="dDY-Bb-gTu" secondAttribute="leading" constant="163" id="yBO-BT-MRp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dDY-Bb-gTu"/>

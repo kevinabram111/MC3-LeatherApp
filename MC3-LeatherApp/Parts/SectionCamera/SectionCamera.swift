@@ -147,7 +147,7 @@ class SectionCamera: UIViewController{
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.videoCapture.stop()
-        navigationController?.navigationBar.barTintColor = UIColor.white
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.3411764706, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
     }
     
     // MARK: - Setup Core ML

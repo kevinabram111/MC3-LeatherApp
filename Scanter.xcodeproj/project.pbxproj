@@ -37,7 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		43322B4D231C1FBF00D0CCB2 /* MC3-LeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC3-LeatherApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43322B4D231C1FBF00D0CCB2 /* Scanter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scanter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43322B50231C1FBF00D0CCB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43322B52231C1FBF00D0CCB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		43322B55231C1FBF00D0CCB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Camera.storyboard; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		43322B4E231C1FBF00D0CCB2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				43322B4D231C1FBF00D0CCB2 /* MC3-LeatherApp.app */,
+				43322B4D231C1FBF00D0CCB2 /* Scanter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,9 +181,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		43322B4C231C1FBF00D0CCB2 /* MC3-LeatherApp */ = {
+		43322B4C231C1FBF00D0CCB2 /* Scanter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43322B5F231C1FC000D0CCB2 /* Build configuration list for PBXNativeTarget "MC3-LeatherApp" */;
+			buildConfigurationList = 43322B5F231C1FC000D0CCB2 /* Build configuration list for PBXNativeTarget "Scanter" */;
 			buildPhases = (
 				43322B49231C1FBF00D0CCB2 /* Sources */,
 				43322B4A231C1FBF00D0CCB2 /* Frameworks */,
@@ -193,9 +193,9 @@
 			);
 			dependencies = (
 			);
-			name = "MC3-LeatherApp";
+			name = Scanter;
 			productName = "MC3-LeatherApp";
-			productReference = 43322B4D231C1FBF00D0CCB2 /* MC3-LeatherApp.app */;
+			productReference = 43322B4D231C1FBF00D0CCB2 /* Scanter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +213,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 43322B48231C1FBF00D0CCB2 /* Build configuration list for PBXProject "MC3-LeatherApp" */;
+			buildConfigurationList = 43322B48231C1FBF00D0CCB2 /* Build configuration list for PBXProject "Scanter" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -226,7 +226,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				43322B4C231C1FBF00D0CCB2 /* MC3-LeatherApp */,
+				43322B4C231C1FBF00D0CCB2 /* Scanter */,
 			);
 		};
 /* End PBXProject section */
@@ -419,7 +419,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8MZ5MU996K;
+				DEVELOPMENT_TEAM = 5H2267G252;
 				INFOPLIST_FILE = "MC3-LeatherApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,7 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8MZ5MU996K;
+				DEVELOPMENT_TEAM = 5H2267G252;
 				INFOPLIST_FILE = "MC3-LeatherApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,7 +453,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		43322B48231C1FBF00D0CCB2 /* Build configuration list for PBXProject "MC3-LeatherApp" */ = {
+		43322B48231C1FBF00D0CCB2 /* Build configuration list for PBXProject "Scanter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43322B5D231C1FC000D0CCB2 /* Debug */,
@@ -462,7 +462,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43322B5F231C1FC000D0CCB2 /* Build configuration list for PBXNativeTarget "MC3-LeatherApp" */ = {
+		43322B5F231C1FC000D0CCB2 /* Build configuration list for PBXNativeTarget "Scanter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43322B60231C1FC000D0CCB2 /* Debug */,

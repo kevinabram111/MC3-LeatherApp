@@ -29,14 +29,15 @@ class SectionCameraViewController: UIViewController{
     
     //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     @IBAction func confirmButtonTapped(_ sender: Any) {
-            System.number = System.number
+        confirmButton.isHidden = true
+        System.number = System.number
         System.savedPictures[System.number!] = screenshotView.asImage()
         
        // System.savedDone[System.number!] == true
         System.savedDone[System.number!] = true
         System.percentage.append(percentagelevel)
+        System.percentageSave[(System.number!-1)] = percentagelevel
         
-        confirmButton.isHidden = true
         
             
         performSegue(withIdentifier: "backtosection", sender: (Any).self)
@@ -59,7 +60,7 @@ class SectionCameraViewController: UIViewController{
         sectionImg.image = FiguresArray.last?.image
         confirmButton.isHidden = false
         
-        navigationController?.navigationBar.barTintColor = UIColor.white
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.3411764706, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
         
         DispatchQueue.main.async {
             var addData = false

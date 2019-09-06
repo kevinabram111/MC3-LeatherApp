@@ -13,7 +13,7 @@
         <!--Onboarding Screen-->
         <scene sceneID="ctJ-h8-gfP">
             <objects>
-                <viewController storyboardIdentifier="Onboarding" id="bME-Wr-J1P" userLabel="Onboarding Screen" customClass="OnboardingViewController" customModule="MC3_LeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Onboarding" id="bME-Wr-J1P" userLabel="Onboarding Screen" customClass="OnboardingViewController" customModule="Scanter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rsM-Dh-BK2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
                                     <action selector="nextButtonDidTapped:" destination="bME-Wr-J1P" eventType="touchUpInside" id="qld-3C-tWr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3C-mc-Q9h" customClass="GetStarted" customModule="MC3_LeatherApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3C-mc-Q9h" customClass="GetStarted" customModule="Scanter" customModuleProvider="target">
                                 <rect key="frame" x="32" y="800" width="350" height="60"/>
                                 <color key="backgroundColor" red="0.13845092058181763" green="0.34076777100563049" blue="0.78827553987503052" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
