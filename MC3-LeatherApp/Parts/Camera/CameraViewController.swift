@@ -129,6 +129,8 @@ class CameraViewController: UIViewController {
         }
     }
     
+    
+    
     func setupPreviewLayer()
     {
         cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
